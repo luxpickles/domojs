@@ -13,14 +13,13 @@ mailcatcher:
     MAILCATCHER_SMTP_PORT: "25"
 
 node:
-  hostname: sandbox-pickles
-  domainname: larciergroup.com
-  #image: node
+  hostname: sandbox-domojs
+  domainname: luxpickles.lu
   build: ./
   ports:
     - "8080:8080"
   volumes:
-    - ./pickles:/usr/src/app
+    - .:/usr/src/app/domojs
   links:
     - mailcatcher:smtp_server
   environment:

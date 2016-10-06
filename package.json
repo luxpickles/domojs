@@ -1,5 +1,5 @@
 {
-  "name": "pickles",
+  "name": "domojs",
   "version": "1.0.0",
   "description": "Domojs project",
   "main": "app.js",
@@ -23,6 +23,6 @@
   },
   "homepage": "https://github.com/luxpickles/domojs",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.14"
   }
 }
