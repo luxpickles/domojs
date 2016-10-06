@@ -1,0 +1,28 @@
+{
+  "name": "pickles",
+  "version": "1.0.0",
+  "description": "Domojs project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luxpickles/domojs.git"
+  },
+  "keywords": [
+    "Domojs",
+    "luxpickles",
+    "pickles"
+  ],
+  "author": "Luxpickles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luxpickles/domojs/issues"
+  },
+  "homepage": "https://github.com/luxpickles/domojs",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

@@ -1,0 +1,27 @@
+# If docker-machine still hangs on trying to connect to "default", try this:
+# $ eval $(docker-machine env pickles)
+# where "pickles" was the name of the custom docker-machine
+# then resume with
+# $ docker-compose up -d
+
+mailcatcher:
+  image: dbit/mailcatcher:0.5.12
+  ports:
+    - "1080:1080"
+    - "25"
+  environment:
+    MAILCATCHER_SMTP_PORT: "25"
+
+node:
+  hostname: sandbox-pickles
+  domainname: larciergroup.com
+  #image: node
+  build: ./
+  ports:
+    - "8080:8080"
+  volumes:
+    - ./pickles:/usr/src/app
+  links:
+    - mailcatcher:smtp_server
+  environment:
+    MAILCATCHER_PORT: "25"
